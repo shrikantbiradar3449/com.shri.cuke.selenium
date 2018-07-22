@@ -2,11 +2,11 @@ package selenium;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import managers.FileReaderManager;
- 
+import org.openqa.selenium.*; 
  
 public class Wait {
 	
@@ -51,5 +51,13 @@ public class Wait {
 		}          
 	}
 	
+
+	
+	public static void untilElementisVisible(WebDriver driver, By elem){
+		long explicitWait = FileReaderManager.getInstance().getConfigReader().getExplicitWait();
+		WebDriverWait webDriverWait = new WebDriverWait(driver, explicitWait);
+		webDriverWait.until(ExpectedConditions.presenceOfElementLocated(elem));
+		System.out.println("Waited for Visibility of element Explicit wait");
+	}
 	
 }

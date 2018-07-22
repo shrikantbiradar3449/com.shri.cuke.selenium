@@ -12,10 +12,15 @@ import managers.FileReaderManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = "src/test/resources/functionalTests",
+	features = "src/test/resources/functionalTests/herokuAppLogin.feature", //my/package/**/*.feature
 	glue= {"stepDefinitions"},
 	plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 	monochrome = true
+//	,dryRun = true
+//	,format = {“html:Folder_Name“}
+//	,format = {“json:Folder_Name/cucumber.json“}
+//	,format = { “junit:Folder_Name/cucumber.xml“}
+	,strict=true
 	)
  
  

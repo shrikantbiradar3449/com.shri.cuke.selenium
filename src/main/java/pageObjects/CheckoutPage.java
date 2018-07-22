@@ -42,6 +42,11 @@ public class CheckoutPage {
 	@FindBy(how = How.CSS, using = "#billing_state_field .select2-arrow") 
 	private WebElement drpdwn_CountyDropDownArrow;
 	
+	@FindBy(how = How.CSS, using = "#s2id_autogen1_search") 
+	private WebElement txtbx_dropdownTypeAhead;
+	
+	
+	
 	@FindAll(@FindBy(how = How.CSS, using = "#select2-drop ul li"))
 	private List<WebElement> country_List;	
 	
@@ -100,15 +105,24 @@ public class CheckoutPage {
 		Wait.untilJqueryIsDone(driver);
 	}
 	
-	public void select_Country(String countryName) {
+	public void select_Country(String countryName) throws Exception {
+		//Getting error here
+		
+		System.out.println("I am in select_Country");
+		Thread.sleep(10000);
 		Wait.untilJqueryIsDone(driver);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(drpdwn_CountryDropDownArrow).build().perform();
-		drpdwn_CountryDropDownArrow.click();
+		Thread.sleep(3000);
+		drpdwn_CountryDropDownArrow.click(); //Here
+		Thread.sleep(3000);
 		Wait.untilJqueryIsDone(driver);
- 
+		txtbx_dropdownTypeAhead.sendKeys(countryName);
+		Thread.sleep(3000);
 		for(WebElement country : country_List){
 			if(country.getText().equals(countryName)) {
+				actions.moveToElement(country).build().perform();
+				Thread.sleep(3000);
 				country.click();	
 				Wait.untilJqueryIsDone(driver);
 				break;
@@ -117,11 +131,18 @@ public class CheckoutPage {
  
 	}
 	
-	public void select_County(String countyName) {
-		drpdwn_CountyDropDownArrow.click();
+	public void select_County(String countyName) throws Exception {
+		
+		System.out.println("I am in select_County");
+		Thread.sleep(10000);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(drpdwn_CountyDropDownArrow).build().perform();
+		Thread.sleep(3000);
+		drpdwn_CountyDropDownArrow.click();  //Here
 		Wait.untilJqueryIsDone(driver);
 		for(WebElement county : country_List){
 			if(county.getText().equals(countyName)) {
+				actions.moveToElement(county).build().perform();
 				county.click();	
 				//Wait.untilJqueryIsDone(driver);
 				break;
@@ -153,7 +174,7 @@ public class CheckoutPage {
 	}
 	
 	
-	public void fill_PersonalDetails(Customer customer) {
+	public void fill_PersonalDetails(Customer customer) throws Exception {
 		enter_Name(customer.firstName);
 		enter_LastName(customer.lastName);
 		enter_Phone(customer.phoneNumber.mob);
@@ -161,7 +182,7 @@ public class CheckoutPage {
 		enter_City(customer.address.city);
 		enter_Address(customer.address.streetAddress);
 		enter_PostCode(customer.address.postCode);
-		select_Country(customer.address.country);
+//		select_Country(customer.address.country);
 		select_County(customer.address.county);		
 	}
  

@@ -26,6 +26,7 @@ public class JsonDataReader {
 		try {
 			bufferReader = new BufferedReader(new FileReader(customerFilePath));
 			Customer[] customers = gson.fromJson(bufferReader, Customer[].class);
+//			gson.
 			return Arrays.asList(customers);
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Json file not found at path : " + customerFilePath);

@@ -48,6 +48,20 @@ public class ConfigFileReader {
 		}
 		return 30;		
 	}
+	
+	
+	public long getExplicitWait() {		
+		String ExplicitWait = properties.getProperty("explicitWait");
+		if(ExplicitWait != null) {
+			try{
+				return Long.parseLong(ExplicitWait);
+			}catch(NumberFormatException e) {
+				throw new RuntimeException("Not able to parse value : " + ExplicitWait + " in to Long");
+			}
+		}
+		return 30;		
+	}
+	
  
 	public String getApplicationUrl() {
 		String url = properties.getProperty("url");

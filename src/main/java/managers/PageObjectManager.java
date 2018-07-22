@@ -16,6 +16,7 @@ import pageObjects.HomePage;
  
 import pageObjects.ProductListingPage;
  
+import pageObjects.HerokuLogInPage;
  
  
 public class PageObjectManager {
@@ -32,15 +33,14 @@ public class PageObjectManager {
  
 	private ConfirmationPage confirmationPage;
  
+	private HerokuLogInPage hirakuPage;
 	
- 
+	
 	public PageObjectManager(WebDriver driver) {
  
 		this.driver = driver;
  
 	}
- 
-	
  
 	public HomePage getHomePage(){
  
@@ -75,6 +75,14 @@ public class PageObjectManager {
 	public ConfirmationPage getConfirmationPage() {
 		return (confirmationPage == null) ? confirmationPage = new ConfirmationPage(driver) : confirmationPage;
 	}
+	
+	
+	public HerokuLogInPage getHirakuPage() {
+		 
+		return (hirakuPage == null) ? hirakuPage = new HerokuLogInPage(driver) : hirakuPage;
+ 
+	}
+ 
 	
 	
 }

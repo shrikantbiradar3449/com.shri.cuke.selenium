@@ -39,7 +39,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 							<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 8, 2018 03:02:51 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jul 23, 2018 12:25:26 AM</span>
 				</a>
 			</li>
 			<li>
@@ -79,8 +78,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -131,10 +128,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -146,10 +143,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -161,10 +158,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='44.444%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='44.444%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -178,97 +175,59 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Automated E2E Tests</span>
-						<span class='test-time'>May 8, 2018 03:02:51 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>LogIn to heroku app</span>
+						<span class='test-time'>Jul 23, 2018 12:25:27 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 1m 32s+113ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 14s+319ms</span>
 	<div class='desc'>
-		<b>ScenarioOutline</b>
-		<span class="desc-text">Customer place an order by purchasing an item from search</span>
+		<b>Scenario</b>
+		<span class="desc-text">Login to Heroku</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node given pass' status='pass'>
 			
-			<b>Scenario</b>
+			<b>Given</b>
 			
-			<span class="bdd-step-name">Customer place an order by purchasing an item from search</span>
+			<span class="bdd-step-name">Given I have navigated to heroku login page</span>
+				<div class='pre'>passed</div>
 			
-				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given user is on Home Page</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When he search for "dress"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose to buy the first item</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And moves to checkout from mini cart</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='8' class='node and fail' status='fail'><b>And</b>
-						<span class="bdd-step-name">And enter "Lakshay" personal details on checkout page</span>
-							<div class='pre'><textarea>org.openqa.selenium.WebDriverException: unknown error: Element <span class="select2-arrow" role="presentation">...</span> is not clickable at point (650, 52). Other element would receive the click: <a href="http://shop.demoqa.com/">...</a>
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'SHRIB-HP', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ShriB\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at pageObjects.CheckoutPage.select_Country(CheckoutPage.java:107)
-	at pageObjects.CheckoutPage.fill_PersonalDetails(CheckoutPage.java:164)
-	at stepDefinitions.CheckoutPageSteps.enter_personal_details_on_checkout_page(CheckoutPageSteps.java:22)
-	at ✽.And enter "Lakshay" personal details on checkout page(End2End_Test.feature:14)
-</textarea></div>
-					</li>
-					<li test-id='9' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And select same delivery address</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='10' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And select payment method as "check" payment</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='11' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And place the order</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='12' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then verify the order details</span>
-							<div class='pre'>skipped</div>
-					</li>
-				</ul>
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I enter username for heroku</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter password for heroku</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I submit the form</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should see heroku homepage</span>
+				<div class='pre'>passed</div>
+			
 		</li>
 	</ul>
 </div>
@@ -326,15 +285,15 @@ Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
 
                         <li class='author displayed active'>
                             <div class='author-heading'>
-                                <span class='author-name'>ToolsQA-LakshaySharma</span>
+                                <span class='author-name'>ToolsQA-ShrikanrBiradar</span>
                                 <span class='author-status right'>
-                                        <span class='label fail'>1</span>
+                                        <span class='label pass'>1</span>
 						        </span>
                             </div>
                             <div class='author-content hide'>
                                 <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 1</span>
                                     
-                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
                                     
                                 </div>
 
@@ -349,9 +308,9 @@ Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>May 8, 2018 03:02:51 PM</td>
-                                                <td class='linked' test-id='3'>Automated E2E Tests.Customer place an order by purchasing an item from search.Customer place an order by purchasing an item from search</td>
-                                                <td><span class='test-status fail'>fail</span></td>
+                                                <td>Jul 23, 2018 12:25:27 AM</td>
+                                                <td class='linked' test-id='2'>LogIn to heroku app.Login to Heroku</td>
+                                                <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -366,100 +325,6 @@ Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
     <div class='subview-right left'>
         <div class='view-summary'>
             <h5 class='author-name'></h5>
-        </div>
-    </div>
-</div>
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>May 8, 2018 03:04:21 PM</td>
-                                                        <td class='linked' test-id='8'>Automated E2E Tests.Customer place an order by purchasing an item from search.Customer place an order by purchasing an item from search.And enter "Lakshay" personal details on checkout page</td>
-                                                        <td><pre><textarea>org.openqa.selenium.WebDriverException: unknown error: Element <span class="select2-arrow" role="presentation">...</span> is not clickable at point (650, 52). Other element would receive the click: <a href="http://shop.demoqa.com/">...</a>
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'SHRIB-HP', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ShriB\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at pageObjects.CheckoutPage.select_Country(CheckoutPage.java:107)
-	at pageObjects.CheckoutPage.fill_PersonalDetails(CheckoutPage.java:164)
-	at stepDefinitions.CheckoutPageSteps.enter_personal_details_on_checkout_page(CheckoutPageSteps.java:22)
-	at ✽.And enter "Lakshay" personal details on checkout page(End2End_Test.feature:14)
-</textarea></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
         </div>
     </div>
 </div>
@@ -484,25 +349,25 @@ Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 8, 2018 03:02:51 PM</div>
+					<div class='panel-lead'>Jul 23, 2018 12:25:26 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 8, 2018 03:07:13 PM</div>
+			 		<div class='panel-lead'>Jul 23, 2018 12:25:42 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>262,574ms</div>
+					<div class='panel-lead'>15,161ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -551,31 +416,31 @@ Session ID: 109d22443628f5e1d1fcf0e5a7afe39f
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 4,
-				failGrandChild: 1,
+				passGrandChild: 5,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 4,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 5,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
