@@ -4,7 +4,7 @@
 
 
 <head>
-	<meta charset='UTF-8' /> 
+	<meta charset='utf-8' /> 
 	<meta name='description' content='' />
 	<meta name='robots' content='noodp, noydir' />
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -15,14 +15,9 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>ToolsQA - Cucumber Framework</title>
+	<title>ExtentReports</title>
 
 	<style type='text/css'>
-			
-      
-        
-      
-    
 	</style>
 </head>
 
@@ -38,12 +33,11 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-							<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>ToolsQA - Cucumber Report</span>
+		<span class='report-name'>ExtentReports</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -52,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jul 23, 2018 12:25:26 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Jul 14, 2021 09:04:21 PM</span>
 				</a>
 			</li>
 			<li>
@@ -77,7 +71,7 @@
 					<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+											<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -128,10 +122,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -143,10 +137,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -158,10 +152,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>5</span> others
 				</div>
 			</div>
 		</div>
@@ -175,58 +169,58 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>LogIn to heroku app</span>
-						<span class='test-time'>Jul 23, 2018 12:25:27 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Jul 14, 2021 09:04:22 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 14s+319ms</span>
+<div class='scenario node' test-id='2' status='skip'>
+	<span class='duration right label'>0h 0m 0s+135ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login to Heroku</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node given skip' status='skip'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given I have navigated to heroku login page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
+		<li test-id='4' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When I enter username for heroku</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
+		<li test-id='5' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I enter password for heroku</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='6' class='node and pass' status='pass'>
+		<li test-id='6' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I submit the form</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='7' class='node then pass' status='pass'>
+		<li test-id='7' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I should see heroku homepage</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -259,75 +253,6 @@
 </div>
 <!-- test view -->
 <!-- category view -->
-<div id='author-view' class='view hide'>
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Authors</h5>
-                <ul id='author-collection' class='author-collection'>
-
-                        <li class='author displayed active'>
-                            <div class='author-heading'>
-                                <span class='author-name'>ToolsQA-ShrikanrBiradar</span>
-                                <span class='author-status right'>
-                                        <span class='label pass'>1</span>
-						        </span>
-                            </div>
-                            <div class='author-content hide'>
-                                <div class='author-status-counts'>
-                                    <span class='label green accent-4 white-text'>Passed: 1</span>
-                                    
-                                    
-                                </div>
-
-                                <div class='author-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Jul 23, 2018 12:25:27 AM</td>
-                                                <td class='linked' test-id='2'>LogIn to heroku app.Login to Heroku</td>
-                                                <td><span class='test-status pass'>pass</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='author-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -355,55 +280,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 23, 2018 12:25:26 AM</div>
+					<div class='panel-lead'>Jul 14, 2021 09:04:21 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 23, 2018 12:25:42 AM</div>
+			 		<div class='panel-lead'>Jul 14, 2021 09:04:22 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>15,161ms</div>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-environment'>
-					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Value</th>
-						</tr>
-							<tr>
-								<td>User Name</td>
-								<td>ShriB</td>
-							</tr>
-							<tr>
-								<td>Time Zone</td>
-								<td>Asia/Calcutta</td>
-							</tr>
-							<tr>
-								<td>Machine</td>
-								<td>Windows 1064 Bit</td>
-							</tr>
-							<tr>
-								<td>Selenium</td>
-								<td>3.7.0</td>
-							</tr>
-							<tr>
-								<td>Maven</td>
-								<td>3.5.2</td>
-							</tr>
-							<tr>
-								<td>Java Version</td>
-								<td>1.8.0_151</td>
-							</tr>
-					</table>
+					<div class='panel-lead'>260ms</div>
 				</div>
 			</div>
 		</div>
@@ -416,31 +305,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 1,
+				exceptionsParent: 1,
 				
-				passChild: 1,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 1,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 5,
+				passGrandChild: 0,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 5,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 5,
 			};
 		</script>
 		
@@ -448,13 +337,6 @@
 		
 		
  		<script type='text/javascript'>
- 			
-      
-        $(document).ready(function() {
-        
-        });
-      
-    
  		</script>
 	</body>
 	

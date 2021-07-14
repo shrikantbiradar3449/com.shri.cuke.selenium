@@ -1,0 +1,14 @@
+
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+/.class
+*/target/**
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
