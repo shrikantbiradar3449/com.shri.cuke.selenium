@@ -5,7 +5,7 @@
 /workspace.xml
 
 /.class
-*/target/**
+/target/**
 
 ### IntelliJ IDEA ###
 .idea
