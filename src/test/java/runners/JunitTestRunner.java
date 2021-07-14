@@ -12,7 +12,7 @@ import managers.FileReaderManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = "src/test/resources/functionalTests/herokuAppLogin.feature", //my/package/**/*.feature
+	features = "src/test/resources/features/herokuAppLogin.feature", //my/package/**/*.feature
 	glue= {"stepDefinitions"},
 	plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 	monochrome = true
@@ -24,7 +24,7 @@ import managers.FileReaderManager;
 	)
  
  
-public class TestRunner {
+public class JunitTestRunner {
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
