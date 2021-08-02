@@ -17,12 +17,18 @@ public class Hooks {
 	public Hooks(TestContext context) {
 		testContext = context;
 	}
-	
-	@Before
-	public void beforeScenario(Scenario scenario) {
-	    Reporter.assignAuthor("ToolsQA - Shrikanr Biradar");
+
+
+	@Before("@First")
+	public void beforeFirst(){
+		System.out.println("This will run only before the First Scenario");
+		Reporter.assignAuthor("ShriBs - Shrikanr Biradar");
 //	    Reporter.addStepLog("Step Log message goes here");
 //	    Reporter.addScenarioLog("Scenario Log message goes here");
+	}
+	@Before
+	public void beforeScenario(Scenario scenario) {
+
 	}
 	
 	@After(order = 1)

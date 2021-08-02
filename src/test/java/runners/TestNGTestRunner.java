@@ -1,45 +1,51 @@
 package runners;
 
-import com.cucumber.listener.Reporter;
+
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-//import cucumber.api.testng.AbstractTestNGCucumberTests;
-import managers.FileReaderManager;
-import org.junit.AfterClass;
-import org.junit.runner.RunWith;
 
-import java.io.File;
-
-
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-//import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
-//features = "src/test/resources/functionalTests/herokuAppLogin.feature",
-//features = "classpath:features",
-@CucumberOptions(
-		features = "src/test/resources/functionalTests/herokuAppLogin2021.feature",
-		glue = {"stepDefinitions"},
-		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-		tags = {"@2021"}
-)
-public class TestNGTestRunner extends AbstractTestNGCucumberTests {
+import org.testng.annotations.Test;
 
-//	@Override
-	@DataProvider(parallel = true)
-	public Object[][] scenarios() {
-		return super.scenarios();
+
+import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.TestNGCucumberRunner;
+
+@CucumberOptions(
+		features = "src/test/resources/features/herokuAppLogin2021.feature",
+		glue = {"stepDefinitions"},
+		tags = {"~@Ignore"},
+		format = {
+				"pretty",
+				"html:target/cucumber-reports/cucumber-pretty",
+				"json:target/cucumber-reports/CucumberTestReport.json",
+				"rerun:target/cucumber-reports/rerun.txt"
+		},plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+
+
+public class TestNGTestRunner  {
+
+	private TestNGCucumberRunner testNGCucumberRunner;
+
+	@BeforeClass(alwaysRun = true)
+	public void setUpClass() throws Exception {
+		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	}
 
+	@Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
+	public void feature(CucumberFeatureWrapper cucumberFeature) {
+		testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+	}
 
-	@AfterClass
-	public static void writeExtentReport() {
-		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
-		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
-		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-		Reporter.setSystemInfo("Machine", 	"Windows 10" + "64 Bit");
-		Reporter.setSystemInfo("Selenium", "3.7.0");
-		Reporter.setSystemInfo("Maven", "3.5.2");
-		Reporter.setSystemInfo("Java Version", "1.8.0_151");
+	@DataProvider
+	public Object[][] features() {
+		return testNGCucumberRunner.provideFeatures();
+	}
+
+	@AfterClass(alwaysRun = true)
+	public void tearDownClass() throws Exception {
+		testNGCucumberRunner.finish();
 	}
 }
  

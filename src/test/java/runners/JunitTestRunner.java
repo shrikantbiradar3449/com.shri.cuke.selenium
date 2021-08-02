@@ -15,7 +15,8 @@ import managers.FileReaderManager;
 	features = "src/test/resources/features/herokuAppLogin.feature",
 	glue= {"stepDefinitions"},
 	plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-	monochrome = true
+	monochrome = true,
+	tags = {"@First"}
 //	,dryRun = true
 //	,format = {“html:Folder_Name“}
 //	,format = {“json:Folder_Name/cucumber.json“}

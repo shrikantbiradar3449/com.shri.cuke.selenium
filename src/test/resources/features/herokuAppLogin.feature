@@ -4,6 +4,7 @@ Background:
 Given I have navigated to heroku login page
 
 
+  @First
 Scenario: Login to Heroku
 When I enter username for heroku
 And I enter password for heroku
