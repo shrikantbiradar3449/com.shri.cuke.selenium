@@ -12,7 +12,7 @@ import managers.FileReaderManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = "src/test/resources/features/herokuAppLogin.feature", //my/package/**/*.feature
+	features = "src/test/resources/features/herokuAppLogin.feature",
 	glue= {"stepDefinitions"},
 	plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 	monochrome = true
