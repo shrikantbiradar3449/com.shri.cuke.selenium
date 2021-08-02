@@ -16,12 +16,15 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		features = "src/test/resources/features/herokuAppLogin2021.feature",
 		glue = {"stepDefinitions"},
 		tags = {"~@Ignore"},
-		format = {
-				"pretty",
-				"html:target/cucumber-reports/cucumber-pretty",
-				"json:target/cucumber-reports/CucumberTestReport.json",
-				"rerun:target/cucumber-reports/rerun.txt"
-		},plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+//		format = {
+//				"pretty",
+//				"html:target/cucumber-reports/cucumber-pretty",
+//				"json:target/cucumber-reports/CucumberTestReport.json",
+//				"rerun:target/cucumber-reports/rerun.txt"
+//		},
+//		plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+		plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
+)
 
 
 public class TestNGTestRunner  {

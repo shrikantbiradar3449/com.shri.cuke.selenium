@@ -93,6 +93,7 @@
 	<artifactId>extentreports</artifactId>
 	<version>3.1.2</version>
     </dependency>
+
 	  <dependency>
 		  <groupId>net.masterthought</groupId>
 		  <artifactId>cucumber-reporting</artifactId>
@@ -149,14 +150,14 @@
 				<executions>
 					<execution>
 						<id>execution</id>
-						<phase>verify</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>MyProjectName</projectName>  <!-- Replace with project name -->
-							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<projectName>Shrib's Automation Lab</projectName>  <!-- Replace with project name -->
+							<outputDirectory>target/Report/cucumber-reports</outputDirectory>
+							<cucumberOutput>target/cucumber/cucumber.json</cucumberOutput>
 							<buildNumber>1</buildNumber>
 							<parallelTesting>false</parallelTesting>
 						</configuration>
