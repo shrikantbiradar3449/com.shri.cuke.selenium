@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import java.io.File;
 import java.io.IOException;
+
+import enums.Context;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import com.cucumber.listener.Reporter;
@@ -17,7 +19,7 @@ public class Hooks {
 	public Hooks(TestContext context) {
 		testContext = context;
 	}
-
+	Scenario scenario;
 
 	@Before("@First")
 	public void beforeFirst(){
@@ -28,7 +30,9 @@ public class Hooks {
 	}
 	@Before
 	public void beforeScenario(Scenario scenario) {
-
+		String screenshotName = scenario.getName().replaceAll(" ", "_");
+		testContext.scenarioContext.setContext(Context.SCENARIO_NAME, screenshotName);
+		this.scenario = scenario;
 	}
 	
 	@After(order = 1)

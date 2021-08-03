@@ -1,5 +1,6 @@
 package enums;
 
 public enum Context {
-	PRODUCT_NAME;
+	PRODUCT_NAME,
+	SCENARIO_NAME;
 }
