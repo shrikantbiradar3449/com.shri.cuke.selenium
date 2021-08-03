@@ -36,6 +36,12 @@ public class ConfigFileReader {
 		if(driverPath!= null) return driverPath;
 		else throw new RuntimeException("Driver Path not specified in the Configuration.properties file for the Key:driverPath");		
 	}
+
+	public String getTestDataPath(String workBook){
+		String testDataPath = properties.getProperty(workBook);
+		if(testDataPath!= null) return testDataPath;
+		else throw new RuntimeException("testDataSheetPath not specified in the Configuration.properties file for the Key:testDataSheetPath");
+	}
  
 	public long getImplicitlyWait() {		
 		String implicitlyWait = properties.getProperty("implicitlyWait");
