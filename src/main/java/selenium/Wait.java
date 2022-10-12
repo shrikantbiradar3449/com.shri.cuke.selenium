@@ -1,5 +1,6 @@
 package selenium;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -42,8 +43,8 @@ public class Wait {
  
 	
 	private static void until(WebDriver driver, Function<WebDriver, Boolean> waitCondition, Long timeoutInSeconds){
-		WebDriverWait webDriverWait = new WebDriverWait(driver, timeoutInSeconds);
-		webDriverWait.withTimeout(timeoutInSeconds, TimeUnit.SECONDS);
+		WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+		webDriverWait.withTimeout(Duration.ofSeconds(timeoutInSeconds));
 		try{
 			webDriverWait.until(waitCondition);
 		}catch (Exception e){
@@ -55,7 +56,7 @@ public class Wait {
 	
 	public static void untilElementisVisible(WebDriver driver, By elem){
 		long explicitWait = FileReaderManager.getInstance().getConfigReader().getExplicitWait();
-		WebDriverWait webDriverWait = new WebDriverWait(driver, explicitWait);
+		WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
 		webDriverWait.until(ExpectedConditions.presenceOfElementLocated(elem));
 		System.out.println("Waited for Visibility of element Explicit wait");
 	}

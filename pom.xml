@@ -23,6 +23,13 @@
 		  <scope>test</scope>
 	  </dependency>
 
+<!--	  <dependency>-->
+<!--		  <groupId>io.cucumber</groupId>-->
+<!--		  <artifactId>cucumber-java</artifactId>-->
+<!--		  <version>7.5.0</version>-->
+<!--		  <scope>test</scope>-->
+<!--	  </dependency>-->
+
 
 <!--	  <dependency>-->
 <!--		  <groupId>io.cucumber</groupId>-->
@@ -49,11 +56,17 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
-    </dependency>
+<!--    <dependency>-->
+<!--    <groupId>org.seleniumhq.selenium</groupId>-->
+<!--    <artifactId>selenium-java</artifactId>-->
+<!--    <version>3.141.59</version>-->
+<!--    </dependency>-->
+
+	  <dependency>
+		  <groupId>org.seleniumhq.selenium</groupId>
+		  <artifactId>selenium-java</artifactId>
+		  <version>4.0.0</version>
+	  </dependency>
 
 	<dependency>
 	    <groupId>info.cukes</groupId>
@@ -81,6 +94,13 @@
 	    <version>1.2.5</version>
 	    <scope>test</scope>
 	</dependency>
+
+<!--	  <dependency>-->
+<!--		  <groupId>io.cucumber</groupId>-->
+<!--		  <artifactId>cucumber-picocontainer</artifactId>-->
+<!--		  <version>7.5.0</version>-->
+<!--		  <scope>test</scope>-->
+<!--	  </dependency>-->
 	
 	<dependency>
 	<groupId>com.vimalselvam</groupId>
@@ -132,6 +152,11 @@
 		  <version>3.17</version>
 	  </dependency>
 
+	  <dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>21.0</version>
+	  </dependency>
 
   </dependencies>
   
