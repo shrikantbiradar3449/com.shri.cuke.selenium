@@ -12,8 +12,17 @@ package stepDefinitions;
 //import pageObjects.CheckoutPage;
 //import pageObjects.HomePage;
 //import pageObjects.ProductListingPage;
- 
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 public class Steps {
+
+    @Given("^I do something with \"([^\"]*)\" from example table$")
+    public void iDoSomethingWithNames(String name) {
+        System.out.print(name);
+    }
 //	WebDriver driver;
 //	HomePage homePage;
 //	ProductListingPage productListingPage;

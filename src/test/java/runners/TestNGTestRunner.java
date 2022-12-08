@@ -11,7 +11,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions(
 		features = "src/test/resources/features/herokuAppLogin2021.feature",
 		glue = {"stepDefinitions"},
-		tags = {"~@Ignore"},
+		tags = {"@new"},
+//		tags = {"~@Ignore"},
 //		format = {
 //				"pretty",
 //				"html:target/cucumber-reports/cucumber-pretty",
@@ -19,6 +20,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 //				"rerun:target/cucumber-reports/rerun.txt"
 //		},
 //		plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+//		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}
 		plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
 )
 

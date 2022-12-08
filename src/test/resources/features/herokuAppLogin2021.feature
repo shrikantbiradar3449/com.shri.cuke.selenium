@@ -15,6 +15,27 @@ Scenario: Login to Heroku SC01
 #  By Providing column name
   And Select shipnode as "Severity" from results and click on Submit
 
+  @new
+Scenario Outline:
+
+  When I do something with "<Names>" from example table
+
+    @old
+  Examples:
+    |Names    |
+    | Shrikant|
+    | Reva    |
+    | Renuka  |
+    | Riya    |
+
+    @new
+    Examples:
+      |Names    |
+      | Shrikant|
+      | Reva    |
+
+
+
 
 #  @2021
 #  Example:Login to Heroku Again
