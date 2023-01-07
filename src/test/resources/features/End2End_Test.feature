@@ -1,7 +1,7 @@
 Feature: Automated E2E Tests
   Description: To test E2E integration
 
-
+#new comment
 
 Scenario Outline: Customer place an order by purchasing an item from search	
 	Given user is on Home Page
