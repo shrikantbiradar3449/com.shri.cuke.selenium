@@ -3,6 +3,7 @@ package managers;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import enums.DriverType;
@@ -44,7 +45,10 @@ public class WebDriverManager {
 	    	break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
-        	driver = new ChromeDriver();
+//        	driver = new ChromeDriver();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
+			driver = new ChromeDriver(chromeOptions);
     		break;
         case INTERNETEXPLORER : driver = new InternetExplorerDriver();
     		break;
